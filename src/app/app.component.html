@@ -13,33 +13,19 @@
 
   <div class="panel">
 
-    <div class="panel__nav">
-      <button type="button" class="btn btn-outline-success">FRUTAS</button>
-      <button type="button" class="btn btn-outline-danger">MASSAS</button>
-      <button type="button" class="btn btn-outline-warning">CARNES</button>
-      <button type="button" class="btn btn-outline-primary">LATICÍNIOS</button>
-      <button type="button" class="btn btn-outline-secondary">BEBIDAS</button>
-      <button type="button" class="btn btn-outline-dark">CEREAIS</button>
-      <button type="button" class="btn btn-outline-dark">LEGUMINOSAS</button>
-    </div>
+    <!-- product card -->
+    <app-product-category-filter></app-product-category-filter>
 
     <div class="panel__data">
       <div class="panel__fruits">
         <span>PRODUTOS</span>
         <div class="fruits">
           <div class="row">
-            <div class="col">
+            <div class="product__card col-lg-5 col-md-5" *ngFor="let product of products" (click)="someFunction(product.id)">
               <ul>
-                <li>FR BANANA <img src="https://img.icons8.com/windows/24/000000/info.png"></li>
-                <li>ENVIADO EM 15/04/2019</li>
-                <li>EM ESTOQUE</li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul>
-                <li>FR T KIWI <img src="https://img.icons8.com/windows/24/000000/info.png"></li>
-                <li>ENVIADO EM 15/04/2019</li>
-                <li>EM ESTOQUE</li>
+                <li>{{ product.product_type }} {{ product.product_name }}</li>
+                <li>ENVIADO EM {{ product.shipping_date}}</li>
+                <li>{{ product.status}}</li>
               </ul>
             </div>
           </div>
@@ -48,23 +34,9 @@
       <div class="panel__market">
         <span>MERCADO</span>
         <div class="list">
-          <div class="list__item">
-            <div class="item__avatar">
-              <div class="avatar">
-                <i class="fas fa-user"></i>
-              </div>
-            </div>
-            <div class="item">
-              <div class="item__data">
-                <span>ATHYLLAS MERCADO</span>
-                <span>54%</span>
-              </div>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 54%" aria-valuenow="54" aria-valuemin="0"
-                  aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
+          <!-- stok card -->
+          <app-stock-market-card></app-stock-market-card>
+
         </div>
       </div>
     </div>

@@ -1,0 +1,11 @@
+.panel__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  button {
+    margin: 1%;
+    border-radius: 50px;
+  }
+}
