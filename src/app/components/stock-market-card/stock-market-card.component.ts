@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ProductsService } from 'src/app/services/product/products.service';
 
 @Component({
@@ -6,18 +6,24 @@ import { ProductsService } from 'src/app/services/product/products.service';
   templateUrl: './stock-market-card.component.html',
   styleUrls: ['./stock-market-card.component.scss']
 })
-export class StockMarketCardComponent implements OnInit {
+export class StockMarketCardComponent implements OnInit, OnChanges {
+
+  @Input() idProduct: any;
 
   public markets: any;
 
   constructor(private productService: ProductsService) { }
 
   ngOnInit() {
-    this.getMarkets();
+    this.getMarkets(this.idProduct);
   }
 
-  getMarkets() {
-    this.productService.getMarket().subscribe((response) => {
+  ngOnChanges(changes: SimpleChanges) {
+    this.getMarkets(this.idProduct);
+  }
+
+  getMarkets(idProduct) {
+    this.productService.getMarket(idProduct).subscribe((response) => {
       this.markets = response;
     });
   }

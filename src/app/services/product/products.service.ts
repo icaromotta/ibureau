@@ -19,8 +19,8 @@ export class ProductsService {
     return this.http.get<any>(URL);
   }
 
-  public getMarket(): Observable<any> {
-    const URL = 'http://ibureau.herokuapp.com/products/1';
+  public getMarket(idProduct: any): Observable<any> {
+    const URL = 'http://ibureau.herokuapp.com/products/' + idProduct;
     return this.http.get<any>(URL);
   }
 }

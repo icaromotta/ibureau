@@ -20,13 +20,16 @@
       <div class="panel__fruits">
         <span>PRODUTOS</span>
         <div class="fruits">
-          <div class="row">
-            <div class="product__card col-lg-5 col-md-5" *ngFor="let product of products" (click)="someFunction(product.id)">
-              <ul>
-                <li>{{ product.product_type }} {{ product.product_name }}</li>
-                <li>ENVIADO EM {{ product.shipping_date}}</li>
-                <li>{{ product.status}}</li>
-              </ul>
+          <div>
+            <div class="row">
+              <div class="product__card col-lg-5 col-md-5" *ngFor="let product of products"
+                (click)="atualizaIdProduto(product.id)">
+                <ul>
+                  <li>{{ product.product_type }} {{ product.product_name }}</li>
+                  <li>ENVIADO EM {{ product.shipping_date}}</li>
+                  <li>{{ product.status}}</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -35,7 +38,10 @@
         <span>MERCADO</span>
         <div class="list">
           <!-- stok card -->
-          <app-stock-market-card></app-stock-market-card>
+          <app-stock-market-card [idProduct]="idProduct"></app-stock-market-card>
+          <div style="margin-top: 40%;" *ngIf="idProduct == 0">
+            <h1 style="color: orangered;">Nenhum produto selecionado!</h1>
+          </div>
         </div>
       </div>
     </div>

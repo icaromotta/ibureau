@@ -1,7 +1,7 @@
 .container {
   background-color: #611829;
   border-radius: 15px;
-  margin-top: 5%;
+  margin-top: 3%;
   color: #ffffff;
   padding: 0.5%;
 
@@ -40,7 +40,7 @@
       padding: 0.5%;
 
       .panel__fruits {
-        background-color: #419D47;
+        background-color: #419d47;
         width: 50%;
         border-radius: 15px;
         padding: 0.5%;
@@ -52,10 +52,31 @@
           font-weight: bold;
         }
 
+        ::-webkit-scrollbar {
+          width: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 14px 14px transparent;
+          border: solid 2px transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          box-shadow: inset 0 0 14px 14px #bbbbbe;
+          border: solid 2px transparent;
+          border-radius: 14px;
+        }
+
+        ::-webkit-scrollbar-button {
+          display: none;
+        }
+
         .fruits {
           background-color: #fcfcfc;
           border-radius: 15px;
           padding: 3%;
+          height: 60%;
+          overflow: scroll;
 
           .product__card {
             margin: 3%;
@@ -98,9 +119,30 @@
           font-weight: bold;
         }
 
+        ::-webkit-scrollbar {
+          width: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 14px 14px transparent;
+          border: solid 2px transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          box-shadow: inset 0 0 14px 14px #bbbbbe;
+          border: solid 2px transparent;
+          border-radius: 14px;
+        }
+
+        ::-webkit-scrollbar-button {
+          display: none;
+        }
+
         .list {
           background-color: #fcfcfc;
           border-radius: 15px;
+          height: 60%;
+          overflow: scroll;
         }
       }
     }

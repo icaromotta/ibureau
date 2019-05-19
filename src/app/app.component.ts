@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
 
   title = 'ibureau';
   public products: any;
+  public idProduct: any = 0;
 
   constructor(private productService: ProductsService) { }
 
@@ -17,9 +18,13 @@ export class AppComponent implements OnInit {
     this.lisProducts();
   }
 
-  lisProducts() {
+  public lisProducts() {
     this.productService.getProducts().subscribe((response) => {
       this.products = response;
     });
+  }
+
+  public atualizaIdProduto(idProduto) {
+    this.idProduct = idProduto;
   }
 }
