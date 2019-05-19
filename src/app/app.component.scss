@@ -76,7 +76,7 @@
           border-radius: 15px;
           padding: 3%;
           height: 60%;
-          overflow: scroll;
+          overflow-y: scroll;
 
           .product__card {
             margin: 3%;
@@ -142,7 +142,7 @@
           background-color: #fcfcfc;
           border-radius: 15px;
           height: 60%;
-          overflow: scroll;
+          overflow-y: scroll;
         }
       }
     }
