@@ -20,20 +20,21 @@
       <div class="panel__fruits">
         <span>PRODUTOS</span>
         <div class="fruits">
-          <div>
-            <div class="row">
-              <div class="product__card col-lg-5 col-md-5" *ngFor="let product of products"
-                (click)="atualizaIdProduto(product.id)">
-                <ul>
-                  <li>{{ product.product_type }} {{ product.product_name }}</li>
-                  <li>ENVIADO EM {{ product.shipping_date}}</li>
-                  <li *ngIf="product.status === 'em estoque'" [ngStyle]="{'color': 'green'}">{{ product.status}}</li>
-                  <li *ngIf="product.status === 'em falta'" [ngStyle]="{'color': 'red'}">{{ product.status}}</li>
-                  <li *ngIf="product.status === 'pouco em estoque'" [ngStyle]="{'color': 'yellow'}">{{ product.status}}</li>
-                </ul>
-              </div>
+
+          <div class="row">
+            <div class="product__card col-lg-5 col-md-5" *ngFor="let product of products"
+              (click)="atualizaIdProduto(product.id)">
+              <ul>
+                <li>{{ product.product_type }} {{ product.product_name }}</li>
+                <li>ENVIADO EM {{ product.shipping_date}}</li>
+                <li *ngIf="product.status === 'em estoque'" [ngStyle]="{'color': 'green'}">{{ product.status}}</li>
+                <li *ngIf="product.status === 'em falta'" [ngStyle]="{'color': 'red'}">{{ product.status}}</li>
+                <li *ngIf="product.status === 'pouco em estoque'" [ngStyle]="{'color': 'yellow'}">{{ product.status}}
+                </li>
+              </ul>
             </div>
           </div>
+
         </div>
       </div>
       <div class="panel__market">
