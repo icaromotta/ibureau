@@ -27,7 +27,9 @@
                 <ul>
                   <li>{{ product.product_type }} {{ product.product_name }}</li>
                   <li>ENVIADO EM {{ product.shipping_date}}</li>
-                  <li>{{ product.status}}</li>
+                  <li *ngIf="product.status === 'em estoque'" [ngStyle]="{'color': 'green'}">{{ product.status}}</li>
+                  <li *ngIf="product.status === 'em falta'" [ngStyle]="{'color': 'red'}">{{ product.status}}</li>
+                  <li *ngIf="product.status === 'pouco em estoque'" [ngStyle]="{'color': 'yellow'}">{{ product.status}}</li>
                 </ul>
               </div>
             </div>
