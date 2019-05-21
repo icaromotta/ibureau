@@ -42,6 +42,7 @@
       .panel__fruits {
         background-color: #419d47;
         width: 50%;
+        height: 60%;
         border-radius: 15px;
         padding: 0.5%;
         margin: 0.3%;
@@ -75,34 +76,36 @@
           background-color: #fcfcfc;
           border-radius: 15px;
           padding: 3%;
-          height: 60%;
+          height: 400px;
           overflow-y: scroll;
 
-          .product__card {
-            margin: 3%;
-            border-radius: 10px;
-            border: 1px solid #419d47;
-            border-left: 5px solid #419d47;
-            cursor: pointer;
-          }
+          .row {
+            .product__card {
+              margin: 3%;
+              border-radius: 10px;
+              border: 1px solid #419d47;
+              border-left: 5px solid #419d47;
+              cursor: pointer;
+            }
 
-          .product__card li:nth-child(1) {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            letter-spacing: 2px;
-            color: #000000;
-            font-weight: bold;
-          }
+            .product__card li:nth-child(1) {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              letter-spacing: 2px;
+              color: #000000;
+              font-weight: bold;
+            }
 
-          .product__card li:nth-child(2) {
-            color: #000000;
-            text-align: start;
-          }
+            .product__card li:nth-child(2) {
+              color: #000000;
+              text-align: start;
+            }
 
-          .product__card li:nth-child(3) {
-            color: #00a50b;
-            font-weight: bold;
+            .product__card li:nth-child(3) {
+              color: #00a50b;
+              font-weight: bold;
+            }
           }
         }
       }
@@ -142,7 +145,7 @@
         .list {
           background-color: #fcfcfc;
           border-radius: 15px;
-          height: 60%;
+          height: 400px;
           overflow-y: scroll;
         }
       }

@@ -40,9 +40,8 @@
       <div class="panel__market">
         <span>MERCADO</span>
         <div class="list">
-          <!-- stok card -->
           <app-stock-market-card [idProduct]="idProduct"></app-stock-market-card>
-          <div style="margin-top: 40%;" *ngIf="idProduct == 0">
+          <div style="margin-top: 20%;" *ngIf="idProduct == 0">
             <h1 style="color: orangered;">Nenhum produto selecionado!</h1>
           </div>
         </div>
